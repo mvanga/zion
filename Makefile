@@ -1,5 +1,11 @@
+include .config
+
 NAME=zion
 ARCH=x86
+
+obj-$(CONFIG_ARCH_X86) += arch/x86/boot.o \
+	arch/x86/init.o \
+	arch/x86/early_printk.o
 
 obj-y += kernel/console.o
 

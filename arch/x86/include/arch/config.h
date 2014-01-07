@@ -1,0 +1,6 @@
+#ifndef ZION_ARCH_X86_CONFIG_H
+#define ZION_ARCH_X86_CONFIG_H
+
+#define KERNEL_VMA	0xc0000000
+
+#endif
