@@ -3,6 +3,9 @@
 
 #include <arch/early_printk.h>
 #include <arch/segment.h>
+#include <arch/timer.h>
+
+extern int main();
 
 int arch_main(uint32_t magic, unsigned int *mb_info)
 {
@@ -12,5 +15,9 @@ int arch_main(uint32_t magic, unsigned int *mb_info)
 	gdt_init();
 	idt_init();
 
-	for (;;);
+	timer_init();
+
+	asm volatile ("sti");
+
+	return main();
 }

@@ -9,9 +9,12 @@ obj-$(CONFIG_ARCH_X86) += arch/x86/boot.o \
 	arch/x86/gdt.o \
 	arch/x86/idt.o \
 	arch/x86/irq.o \
-	arch/x86/segment.o
+	arch/x86/segment.o \
+	arch/x86/timer.o
 
-obj-y += kernel/console.o
+obj-y += kernel/console.o \
+	kernel/timer.o \
+	kernel/main.o
 
 obj-y += lib/atoi.o \
 	lib/string.o \
