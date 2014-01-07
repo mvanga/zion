@@ -10,5 +10,7 @@ int arch_main(uint32_t magic, unsigned int *mb_info)
 	printk("Hello world! 0x%08x\n", magic);
 
 	gdt_init();
+	idt_init();
+
 	for (;;);
 }
