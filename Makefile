@@ -1,6 +1,8 @@
 NAME=zion
 ARCH=x86
 
+obj-y += kernel/console.o
+
 obj-y += lib/atoi.o \
 	lib/string.o \
 	lib/strtol.o \

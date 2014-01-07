@@ -10,7 +10,7 @@ int getc(void)
 {
 	char c;
 
-	return console_read(early, (char *)&c, 1);
+	return console_read(console_current, (char *)&c, 1);
 }
 
 char *gets(char *s, int size)
@@ -30,7 +30,7 @@ char *gets(char *s, int size)
 
 void putc(int c)
 {
-	console_write(early, (char *)&c, 1);
+	console_write(console_current, (char *)&c, 1);
 }
 
 void puts(char *s)
