@@ -5,7 +5,9 @@ ARCH=x86
 
 obj-$(CONFIG_ARCH_X86) += arch/x86/boot.o \
 	arch/x86/init.o \
-	arch/x86/early_printk.o
+	arch/x86/early_printk.o \
+	arch/x86/gdt.o \
+	arch/x86/segment.o
 
 obj-y += kernel/console.o
 
