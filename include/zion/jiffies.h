@@ -38,6 +38,6 @@ extern volatile uint32_t jiffies;
 #define jiffies_to_msecs(x) \
 	((1000 / HZ) * x)
 
-void delay(int msec);
+void msleep(int msec);
 
 #endif

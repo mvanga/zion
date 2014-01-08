@@ -27,7 +27,7 @@ int main(void)
 {
 	while (1) {
 		printk(".");
-		delay(1000);
+		msleep(1000);
 	}
 	return 0;
 }
