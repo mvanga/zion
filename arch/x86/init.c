@@ -24,8 +24,10 @@
 #include <arch/early_printk.h>
 #include <arch/segment.h>
 #include <arch/timer.h>
+#include <arch/kmalloc.h>
 
 extern int main();
+extern unsigned int __phys_begin;
 
 int arch_main(uint32_t magic, unsigned int *mb_info)
 {
@@ -35,8 +37,10 @@ int arch_main(uint32_t magic, unsigned int *mb_info)
 	gdt_init();
 	idt_init();
 
-	timer_init();
+	/* Set up basic arch malloc (unsafe) */
+	arch_kmalloc_init();
 
+	timer_init();
 	asm volatile ("sti");
 
 	return main();

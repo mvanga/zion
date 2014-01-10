@@ -10,7 +10,8 @@ obj-$(CONFIG_ARCH_X86) += arch/x86/boot.o \
 	arch/x86/idt.o \
 	arch/x86/irq.o \
 	arch/x86/segment.o \
-	arch/x86/timer.o
+	arch/x86/timer.o \
+	arch/x86/kmalloc.o
 
 obj-y += kernel/console.o \
 	kernel/timer.o \
